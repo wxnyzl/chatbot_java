@@ -9,7 +9,7 @@
 1. 下载代码
 
    ```html
-   git clone https://codechina.csdn.net/qq_38558119/chatbot_java.git
+   git clone https://github.com/wxnyzl/chatbot_java.git
    ```
 
 2. 安装相关依赖库
