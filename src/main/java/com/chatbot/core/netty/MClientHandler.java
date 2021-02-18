@@ -9,6 +9,7 @@ import com.chatbot.core.entity.UserMessage;
 import com.chatbot.core.handler.EventExecutor;
 import com.chatbot.core.handler.MessageExecutor;
 import com.chatbot.core.util.JacksonUtil;
+import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.handler.codec.http.websocketx.TextWebSocketFrame;
@@ -26,6 +27,7 @@ import java.util.LinkedHashMap;
  * @create: 2021-02-08 14:21
  */
 @Component
+@ChannelHandler.Sharable
 public class MClientHandler extends SimpleChannelInboundHandler<TextWebSocketFrame> {
 
     private static final Logger log = LoggerFactory.getLogger(MClientHandler.class);
