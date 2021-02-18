@@ -1,0 +1,25 @@
+# WebSocket IP
+wsip: 118.25.84.114:18881
+#TOKEN
+wstoken: your_token
+
+forest:
+  bean-id: config0 # 在spring上下文中bean的id, 默认值为forestConfiguration
+  backend: okhttp3 # 后端HTTP API： okhttp3
+  max-connections: 1000 # 连接池最大连接数，默认值为500
+  max-route-connections: 500 # 每个路由的最大连接数，默认值为500
+  timeout: 10000 # 请求超时时间，单位为毫秒, 默认值为3000
+  connect-timeout: 5000 # 连接超时时间，单位为毫秒, 默认值为2000
+  retry-count: 1 # 请求失败后重试次数，默认为0次不重试
+  ssl-protocol: SSLv3 # 单向验证的HTTPS的默认SSL协议，默认为SSLv3
+  logEnabled: true # 打开或关闭日志，默认为true
+  log-request: true # 打开/关闭Forest请求日志（默认为 true）
+  log-response-status: true # 打开/关闭Forest响应状态日志（默认为 true）
+  log-response-content: true # 打开/关闭Forest响应内容日志（默认为 false）
+  log-handler: com.chatbot.core.request.MyLogImpl
+  variables:
+    httpip: ${wsip}
+    token: ${wstoken}
+
+logging:
+  config: classpath:log4j2.xml
