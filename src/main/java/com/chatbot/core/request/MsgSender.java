@@ -23,8 +23,8 @@ public class MsgSender {
     @Resource
     private MessageSender messageSender;
 
-    public void sendText(String toUser, String text) {
-        messageSender.sendText(new TextVo(toUser,text));
+    public ForestResponse<Object> sendText(String toUser, String text) {
+        return messageSender.sendText(new TextVo(toUser,text));
     }
 
     public ForestResponse<Object> sendText(String toUser, String text, String... atList) {
