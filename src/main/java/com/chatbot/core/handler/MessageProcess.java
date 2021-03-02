@@ -24,7 +24,7 @@ public abstract class MessageProcess {
      * 处理流程
      * @param userMessage
      */
-    protected abstract void process(UserMessage userMessage) throws DocumentException;
+    protected abstract void process(UserMessage userMessage);
 
     public MsgSender sender() {
         return msgSender;

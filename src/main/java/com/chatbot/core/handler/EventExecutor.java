@@ -18,7 +18,7 @@ public class EventExecutor  implements ApplicationListener<ContextRefreshedEvent
 
     private static final Logger log = LoggerFactory.getLogger(EventExecutor.class);
 
-    private List<GroupEventProcess> processList = new ArrayList<>();
+    private final List<GroupEventProcess> processList = new ArrayList<>();
 
     public void executor(GroupBotEvent event) {
         if (CollUtil.isNotEmpty(processList)) {

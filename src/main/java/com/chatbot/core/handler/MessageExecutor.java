@@ -24,7 +24,7 @@ public class MessageExecutor implements ApplicationListener<ContextRefreshedEven
 
     private static final Logger log = LoggerFactory.getLogger(MessageExecutor.class);
 
-    private List<MessageProcess> processList = new ArrayList<>();
+    private final List<MessageProcess> processList = new ArrayList<>();
 
     public void executor(UserMessage userMessage) {
         if (CollUtil.isNotEmpty(processList)) {
